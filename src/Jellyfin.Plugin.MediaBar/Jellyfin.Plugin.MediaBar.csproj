@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <JellyfinVersion>10.11.2</JellyfinVersion>
+        <JellyfinVersion>10.11.9</JellyfinVersion>
         <JellyfinNugetVersion Condition="!$(JellyfinVersion.StartsWith('10.11'))">$(JellyfinVersion)</JellyfinNugetVersion>
         <JellyfinNugetVersion Condition="$(JellyfinVersion.StartsWith('10.11'))">$(JellyfinVersion)</JellyfinNugetVersion>
         <JellyfinNugetVersion Condition="$(JellyfinVersion.StartsWith('10.11.1'))">10.11.0</JellyfinNugetVersion>
@@ -53,7 +53,7 @@
     </ItemGroup>
     
     <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="Exists('C:\ProgramData\Jellyfin\Server_10_11\plugins\MediaBar')">
-        <Exec Condition="'$(JellyfinVersion)' == '10.11.1'" Command="xcopy $(TargetDir) &quot;C:\ProgramData\Jellyfin\Server_10_11\plugins\MediaBar&quot; /y" />
+        <Exec Condition="'$(JellyfinVersion)' == '10.11.9'" Command="xcopy $(TargetDir) &quot;C:\ProgramData\Jellyfin\Server_10_11\plugins\MediaBar&quot; /y" />
         <Exec Condition="'$(JellyfinVersion)' == '10.10.7'"     Command="xcopy $(TargetDir) &quot;C:\ProgramData\Jellyfin\Server_10_10_7\plugins\MediaBar&quot; /y" />
     </Target>
 </Project>

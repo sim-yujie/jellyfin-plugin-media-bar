@@ -25,7 +25,7 @@ As with a lot of devs, I am very momentum based in my personal life coding and t
 ## Installation
 
 ### Prerequisites
-- This plugin is based on Jellyfin Version `10.10.7`
+- This plugin is based on Jellyfin Version `10.11.9`
 - The following plugins are required to also be installed, please following their installation guides:
     - File Transformation (https://github.com/IAmParadox27/jellyfin-plugin-file-transformation) at least v2.2.1.0
 
